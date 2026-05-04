@@ -355,9 +355,9 @@ Ver el archivo completo: [`docs/troubleshooting.md`](./docs/troubleshooting.md)
 
 ## 👤 Autor
 
-**Tu Nombre**  
-📧 tu@email.com  
-🔗 [github.com/tu-usuario](https://github.com/tu-usuario)
+**Arian Araujo Arnaiz**  
+📧 arianaraujoarnaiz@email.com  
+🔗 [github.com/arianaraujo](https://github.com/tu-usuario)
 
 ---
 
