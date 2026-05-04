@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name www.lab.local srv-debian.lab.local;
+
+    root /var/www/lab.local;
+    index index.html;
+
+    access_log /var/log/nginx/lab.local-access-log;
+    error_log /var/log/nginx/lab.local-error-log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
