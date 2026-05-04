@@ -83,6 +83,31 @@ Este proyecto documenta el despliegue completo de un servidor de red en entorno 
 
 ---
 
+## ⚠️ Configuración previa — sudo en Debian 12
+
+Debian 12 no añade el usuario al grupo `sudo` automáticamente durante la instalación.
+Si al ejecutar comandos con `sudo` obtienes el error `user is not in the sudoers file`,
+sigue estos pasos:
+
+```bash
+# 1. Entrar como root
+su -
+
+# 2. Añadir tu usuario al grupo sudo
+usermod -aG sudo tu-usuario
+
+# 3. Salir de root
+exit
+
+# 4. Cerrar sesión y volver a entrar para que surta efecto
+```
+
+Una vez hecho, verifica que funciona:
+
+```bash
+sudo whoami   # Debe responder: root
+```
+
 ## 🔧 Configuración de IP estática
 
 La IP estática se configura editando el archivo `/etc/network/interfaces`:
