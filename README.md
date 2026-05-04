@@ -1,4 +1,4 @@
-# 🖥️ Servidor Debian 12 — DNS (BIND9) + Nginx
+# Servidor Debian 12 — DNS (BIND9) + Nginx
 
 ![Debian](https://img.shields.io/badge/Debian-12%20Bookworm-A81D33?style=flat&logo=debian&logoColor=white)
 ![BIND9](https://img.shields.io/badge/DNS-BIND9-0078D7?style=flat&logo=cloudflare&logoColor=white)
@@ -10,7 +10,7 @@
 
 ---
 
-## 📋 Tabla de contenidos
+## Tabla de contenidos
 
 1. [Descripción del proyecto](#-descripción-del-proyecto)
 2. [Entorno y tecnologías](#-entorno-y-tecnologías)
@@ -25,7 +25,7 @@
 
 ---
 
-## 📌 Descripción del proyecto
+## Descripción del proyecto
 
 Este proyecto documenta el despliegue completo de un servidor de red en entorno de laboratorio virtualizado. Los objetivos técnicos alcanzados son:
 
@@ -36,7 +36,7 @@ Este proyecto documenta el despliegue completo de un servidor de red en entorno 
 
 ---
 
-## 🛠️ Entorno y tecnologías
+## Entorno y tecnologías
 
 | Componente | Detalle |
 |---|---|
@@ -49,7 +49,7 @@ Este proyecto documenta el despliegue completo de un servidor de red en entorno 
 
 ---
 
-## 🌐 Arquitectura de red
+## Arquitectura de red
 
 ```
 ┌────────────────────────────────────┐
@@ -83,7 +83,7 @@ Este proyecto documenta el despliegue completo de un servidor de red en entorno 
 
 ---
 
-## ⚠️ Configuración previa — sudo en Debian 12
+## Configuración previa — sudo en Debian 12
 
 Debian 12 no añade el usuario al grupo `sudo` automáticamente durante la instalación.
 
@@ -106,7 +106,7 @@ Una vez hecho, verificamos que funciona:
 sudo whoami   # Debe responder: root
 ```
 
-## 🔧 Configuración de IP estática
+## Configuración de IP estática
 
 La IP estática se configura editando el archivo `/etc/network/interfaces`:
 
@@ -133,7 +133,7 @@ ip addr show enp0s3   # Verificar la IP asignada
 
 ---
 
-## 🔍 Servicio DNS con BIND9
+## Servicio DNS con BIND9
 
 ### Instalación
 
@@ -221,7 +221,7 @@ dig @192.168.1.14 -x 192.168.1.14
 
 ---
 
-## 🌍 Servidor web con Nginx
+## Servidor web con Nginx
 
 ### Instalación
 
@@ -288,7 +288,7 @@ sudo systemctl reload nginx
 
 ---
 
-## ✅ Verificación desde cliente Windows
+## Verificación desde cliente Windows
 
 ### 1. Configurar el DNS del cliente
 
@@ -321,7 +321,7 @@ http://www.lab.local
 
 ---
 
-## 📁 Estructura del repositorio
+## Estructura del repositorio
 
 ```
 debian-dns-nginx-server/
@@ -348,7 +348,7 @@ debian-dns-nginx-server/
 
 ---
 
-## 📸 Capturas de pantalla
+## Capturas de pantalla
 
 | Paso | Descripción | Archivo |
 |---|---|---|
@@ -358,11 +358,11 @@ debian-dns-nginx-server/
 | 4 | Estado del servicio Nginx (`systemctl status nginx`) | `screenshots/04-nginx-status.png` |
 | 5 | Acceso a `http://www.lab.local` desde Windows | `screenshots/05-web-windows.png` |
 
-> 📂 Las capturas se encuentran en la carpeta [`screenshots/`](./screenshots/)
+> Las capturas se encuentran en la carpeta [`screenshots/`](./screenshots/)
 
 ---
 
-## 🔎 Resolución de problemas
+## Resolución de problemas
 
 Ver el archivo completo: [`docs/troubleshooting.md`](./docs/troubleshooting.md)
 
@@ -376,14 +376,14 @@ Ver el archivo completo: [`docs/troubleshooting.md`](./docs/troubleshooting.md)
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Arian Araujo Arnaiz**  
-📧 arianaraujoarnaiz@email.com  
-🔗 [github.com/arianaraujo](https://github.com/tu-usuario)
+ arianaraujoarnaiz@email.com  
+ [github.com/arianaraujo](https://github.com/tu-usuario)
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la licencia [MIT](LICENSE).
